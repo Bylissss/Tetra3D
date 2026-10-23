@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://c50s6rosqyqem"]
+
+[ext_resource type="Script" uid="uid://damh872hgd05l" path="res://scripts/game.gd" id="1_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://mf626aimj807" path="res://scenes/ui/game_over.tscn" id="2_iywne"]
+[ext_resource type="Theme" uid="uid://bejieuhn182nw" path="res://themes/main_theme.tres" id="2_p57ef"]
+[ext_resource type="PackedScene" uid="uid://coawdk6555tl0" path="res://scenes/ui/ingame_menu.tscn" id="3_p57ef"]
+[ext_resource type="PackedScene" uid="uid://d32u6cpls837e" path="res://scenes/ui/main_menu.tscn" id="4_u5sy4"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8cj0n"]
+sky_top_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+sky_horizon_color = Color(0.44179606, 0.44179606, 0.44179606, 1)
+ground_bottom_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
+ground_horizon_color = Color(0.44179606, 0.44179606, 0.44179606, 1)
+
+[sub_resource type="Sky" id="Sky_uwrxv"]
+sky_material = SubResource("ProceduralSkyMaterial_8cj0n")
+
+[sub_resource type="Environment" id="Environment_yqjtg"]
+sky = SubResource("Sky_uwrxv")
+
+[sub_resource type="BoxMesh" id="BoxMesh_yiofk"]
+size = Vector3(10, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yiofk"]
+size = Vector3(10, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1aktx"]
+size = Vector3(1, 20, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1d4px"]
+size = Vector3(1, 20, 1)
+
+[node name="Game" type="Node3D" unique_id=281386325]
+script = ExtResource("1_lbhrr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1074889377]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+sky_mode = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=57242503]
+environment = SubResource("Environment_yqjtg")
+
+[node name="Bars" type="Node3D" parent="." unique_id=945654484]
+
+[node name="DownBar" type="StaticBody3D" parent="Bars" unique_id=155916121]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bars/DownBar" unique_id=832658116]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+mesh = SubResource("BoxMesh_yiofk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bars/DownBar" unique_id=535291610]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+shape = SubResource("BoxShape3D_yiofk")
+
+[node name="SideBarLeft" type="StaticBody3D" parent="Bars" unique_id=367701164]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, -1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bars/SideBarLeft" unique_id=1031405266]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.5, 0)
+mesh = SubResource("BoxMesh_1aktx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bars/SideBarLeft" unique_id=1267791928]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.5, 0)
+shape = SubResource("BoxShape3D_1d4px")
+
+[node name="SideBarRight" type="StaticBody3D" parent="Bars" unique_id=1208697380]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, -1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bars/SideBarRight" unique_id=1495785387]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.5, 0)
+mesh = SubResource("BoxMesh_1aktx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bars/SideBarRight" unique_id=879520164]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.5, 0)
+shape = SubResource("BoxShape3D_1d4px")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1748581734]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.5, 15)
+projection = 1
+size = 25.0
+
+[node name="ui" type="Control" parent="." unique_id=1418110077]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_p57ef")
+
+[node name="GameOver" parent="ui" unique_id=868325453 instance=ExtResource("2_iywne")]
+visible = false
+layout_mode = 1
+
+[node name="IngameMenu" parent="ui" unique_id=1513830822 instance=ExtResource("3_p57ef")]
+visible = false
+layout_mode = 1
+
+[node name="MainMenu" parent="ui" unique_id=77457195 instance=ExtResource("4_u5sy4")]
+layout_mode = 1

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://coawdk6555tl0"]
+
+[ext_resource type="Theme" uid="uid://bejieuhn182nw" path="res://themes/main_theme.tres" id="1_aw6v6"]
+[ext_resource type="Texture2D" uid="uid://cs46a1xyv104v" path="res://textures/pause.png" id="1_ms88n"]
+
+[node name="IngameMenu" type="Control" unique_id=1513830822]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_aw6v6")
+
+[node name="Button" type="Button" parent="." unique_id=472924647]
+layout_mode = 1
+offset_right = 38.0
+offset_bottom = 38.0
+icon = ExtResource("1_ms88n")
+
+[node name="Label" type="Label" parent="." unique_id=2092262870]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 34.0
+offset_right = 20.0
+offset_bottom = 95.0
+grow_horizontal = 2
+text = "0"

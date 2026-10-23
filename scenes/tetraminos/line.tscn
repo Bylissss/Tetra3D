@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://2yryvxq0prhn"]
+
+[ext_resource type="PackedScene" uid="uid://c25c7sbdsgnvv" path="res://scenes/piece.tscn" id="1_lcsox"]
+
+[node name="Line" type="Node3D" unique_id=1129318038]
+
+[node name="Box" parent="." unique_id=1986132152 instance=ExtResource("1_lcsox")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0)
+
+[node name="Box2" parent="." unique_id=1890166971 instance=ExtResource("1_lcsox")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
+
+[node name="Box3" parent="." unique_id=433647543 instance=ExtResource("1_lcsox")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0)
+
+[node name="Box4" parent="." unique_id=701901330 instance=ExtResource("1_lcsox")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)

@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://mf626aimj807"]
+
+[ext_resource type="Theme" uid="uid://bejieuhn182nw" path="res://themes/main_theme.tres" id="1_60xr3"]
+
+[node name="GameOver" type="Control" unique_id=868325453]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackDrop" type="ColorRect" parent="." unique_id=1234830133]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2538427, 0.25384274, 0.25384268, 0.6745098)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1218174363]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 257.5
+offset_right = 628.0
+offset_bottom = 411.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=479833000]
+layout_mode = 2
+theme = ExtResource("1_60xr3")
+text = "Retry"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1754754692]
+layout_mode = 2
+theme = ExtResource("1_60xr3")
+text = "Quit"
+
+[node name="Label" type="Label" parent="." unique_id=494301898]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.187
+anchor_right = 0.5
+anchor_bottom = 0.187
+offset_left = -85.0
+offset_top = -30.176003
+offset_right = 85.0
+offset_bottom = 30.823997
+grow_horizontal = 2
+theme = ExtResource("1_60xr3")
+text = "Game Over"

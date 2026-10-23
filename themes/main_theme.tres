@@ -1,0 +1,5 @@
+[gd_resource type="Theme" format=3 uid="uid://bejieuhn182nw"]
+
+[resource]
+default_font_size = 44
+VBoxContainer/constants/separation = 16
