@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://ka8hcln83vra"]
 
+[ext_resource type="Script" uid="uid://bgfd21ksmr64s" path="res://scripts/tetramino.gd" id="1_4p64y"]
 [ext_resource type="PackedScene" uid="uid://c25c7sbdsgnvv" path="res://scenes/tetraminos/piece.tscn" id="1_kft5e"]
 
 [node name="J" type="Node3D" unique_id=537959969]
+script = ExtResource("1_4p64y")
 
 [node name="Piece" parent="." unique_id=1986132152 instance=ExtResource("1_kft5e")]
 

@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://bkmiaj43tqyqd"]
 
+[ext_resource type="Script" uid="uid://bgfd21ksmr64s" path="res://scripts/tetramino.gd" id="1_1dnh7"]
 [ext_resource type="PackedScene" uid="uid://c25c7sbdsgnvv" path="res://scenes/tetraminos/piece.tscn" id="1_gjdgg"]
 
 [node name="T" type="Node3D" unique_id=1859482194]
+script = ExtResource("1_1dnh7")
 
 [node name="Piece3" parent="." unique_id=1986132152 instance=ExtResource("1_gjdgg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)

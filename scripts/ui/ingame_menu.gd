@@ -7,7 +7,7 @@ var score_text : Label
 
 func _ready() -> void:
 	pause_resume = $Pause_Resume
-	score_text = $score_text
+	score_text = $Score
 
 	pause_resume.pressed.connect(_on_pause_resume_pressed)
 
