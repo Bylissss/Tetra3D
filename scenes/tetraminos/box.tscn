@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://yiqgyx1t1nmh"]
 
-[ext_resource type="PackedScene" uid="uid://c25c7sbdsgnvv" path="res://scenes/piece.tscn" id="1_v6dxl"]
+[ext_resource type="PackedScene" uid="uid://c25c7sbdsgnvv" path="res://scenes/tetraminos/piece.tscn" id="1_v6dxl"]
 
 [node name="Box" type="Node3D" unique_id=1555419034]
 

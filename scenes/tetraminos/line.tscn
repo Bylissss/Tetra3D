@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://2yryvxq0prhn"]
 
-[ext_resource type="PackedScene" uid="uid://c25c7sbdsgnvv" path="res://scenes/piece.tscn" id="1_lcsox"]
+[ext_resource type="PackedScene" uid="uid://c25c7sbdsgnvv" path="res://scenes/tetraminos/piece.tscn" id="1_lcsox"]
 
 [node name="Line" type="Node3D" unique_id=1129318038]
 

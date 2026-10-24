@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ka8hcln83vra"]
+
+[ext_resource type="PackedScene" uid="uid://c25c7sbdsgnvv" path="res://scenes/tetraminos/piece.tscn" id="1_kft5e"]
+
+[node name="J" type="Node3D" unique_id=537959969]
+
+[node name="Piece" parent="." unique_id=1986132152 instance=ExtResource("1_kft5e")]
+
+[node name="Piece2" parent="." unique_id=1407016384 instance=ExtResource("1_kft5e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Piece3" parent="." unique_id=1757253538 instance=ExtResource("1_kft5e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, 0)
+
+[node name="Piece4" parent="." unique_id=964015958 instance=ExtResource("1_kft5e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
