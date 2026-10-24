@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://c50s6rosqyqem"]
 
 [ext_resource type="Script" uid="uid://damh872hgd05l" path="res://scripts/game.gd" id="1_lbhrr"]
-[ext_resource type="PackedScene" uid="uid://mf626aimj807" path="res://scenes/ui/game_over.tscn" id="2_iywne"]
+[ext_resource type="PackedScene" uid="uid://mf626aimj807" path="res://scenes/ui/game_over_menu.tscn" id="2_iywne"]
 [ext_resource type="Theme" uid="uid://bejieuhn182nw" path="res://themes/main_theme.tres" id="2_p57ef"]
 [ext_resource type="PackedScene" uid="uid://coawdk6555tl0" path="res://scenes/ui/ingame_menu.tscn" id="3_p57ef"]
+[ext_resource type="Script" uid="uid://cdlo4rcl7ij4r" path="res://scripts/ui.gd" id="3_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://d32u6cpls837e" path="res://scenes/ui/main_menu.tscn" id="4_u5sy4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8cj0n"]
@@ -88,8 +89,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_p57ef")
+script = ExtResource("3_u5sy4")
 
-[node name="GameOver" parent="ui" unique_id=868325453 instance=ExtResource("2_iywne")]
+[node name="GameOverMenu" parent="ui" unique_id=868325453 instance=ExtResource("2_iywne")]
 visible = false
 layout_mode = 1
 

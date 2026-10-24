@@ -1,23 +1,14 @@
+class_name Game
 extends Node3D
 
-enum States{
-	BEGIN,
-	GAME_OVER 
-}
+var score : int
+var ui : Control
 
-@export var state : States = States.BEGIN
+func _ready() -> void:
+	ui = $ui
 
 func begin() -> void:
-	pass
+	ui.change_ui(UI.State.INGAME_MENU)
 
-func _process(_delta: float) -> void:
-	match state:
-		
-		States.BEGIN:
-			pass
-			
-		States.GAME_OVER:
-			pass
-			
-		_:
-			pass
+func quit() -> void:
+	get_tree().quit()

@@ -2,6 +2,8 @@
 
 [ext_resource type="Theme" uid="uid://bejieuhn182nw" path="res://themes/main_theme.tres" id="1_aw6v6"]
 [ext_resource type="Texture2D" uid="uid://cs46a1xyv104v" path="res://textures/pause.png" id="1_ms88n"]
+[ext_resource type="Script" uid="uid://dvj4v8eyau6o4" path="res://scripts/ui/ingame_menu.gd" id="2_xpr0l"]
+[ext_resource type="Texture2D" uid="uid://bvud1w0yj7hfl" path="res://textures/resume.png" id="4_nitjr"]
 
 [node name="IngameMenu" type="Control" unique_id=1513830822]
 layout_mode = 3
@@ -11,14 +13,20 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_aw6v6")
+script = ExtResource("2_xpr0l")
+pause_icon = ExtResource("1_ms88n")
+resume_icon = ExtResource("4_nitjr")
 
-[node name="Button" type="Button" parent="." unique_id=472924647]
+[node name="Pause_Resume" type="Button" parent="." unique_id=472924647]
+process_mode = 3
 layout_mode = 1
-offset_right = 38.0
-offset_bottom = 38.0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 72.0
+offset_bottom = 72.0
 icon = ExtResource("1_ms88n")
 
-[node name="Label" type="Label" parent="." unique_id=2092262870]
+[node name="Score" type="Label" parent="." unique_id=2092262870]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5

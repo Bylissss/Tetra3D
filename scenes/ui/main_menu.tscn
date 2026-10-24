@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d32u6cpls837e"]
 
 [ext_resource type="Theme" uid="uid://bejieuhn182nw" path="res://themes/main_theme.tres" id="1_sl1te"]
+[ext_resource type="Script" uid="uid://bgwd2g43leiiq" path="res://scripts/ui/main_menu.gd" id="2_fe2o3"]
 
 [node name="MainMenu" type="Control" unique_id=77457195]
 layout_mode = 3
@@ -10,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_sl1te")
+script = ExtResource("2_fe2o3")
 
 [node name="BackDrop" type="ColorRect" parent="." unique_id=1687650969]
 layout_mode = 1
